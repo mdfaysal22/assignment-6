@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favlarge.png" type="image/x-icon">
+
+    <title>Blog - The Reporter</title>
+
+    <!-- Font Awesome Link Here -->
+    <script src="https://kit.fontawesome.com/7087213ae2.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS Link Here -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+
+    <!-- My CSS Link Here -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-light">
+    <header>
+        <nav class="navbar container mx-auto navbar-expand-lg border-bottom border-2 bg-light">
+        
+            <a class="navbar-brand bold  ms-md-0" href="#">The Reporte<span class="text-danger">r.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav  ms-md-auto">
+                <li class="nav-item h-effect mx-2">
+                  <a class="nav-link " aria-current="page" href="../index.html">News Feed</a>
+                </li>
+                <li class="nav-item h-effect mx-2">
+                  <a class="nav-link active" href="./blog.html">Blog</a>
+                </li>
+                <li class="nav-item mx-2">
+                  <div class="user">
+                      <img class="user-img" src="../img/man.jpg" alt="">
+                  </div>
+                </li>
+              </ul>
+            </div>
+        </nav>
+      <!-- Top Navbar Markup Close Here -->
+    </header>
+
+
+    <main>
+      <section class="container my-3">
+        <!-- Post 01 -->
+        <div>
+          <div class="post-header">
+            <h3>01. What is difference between Var, Let and Const ? </h3>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+              <h5>Var:</h5>
+              <ul>
+                <li>- hoisted (always declared at top of scope, global if none)</li>
+                <li>- function scope</li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <h5>Let:</h5>
+              <ul>
+                <li>- block scope</li>
+                <li>- not redeclarable</li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <h5>Const:</h5>
+              <ul>
+                <li>- block scope</li>
+                <li>- not reassignable</li>
+                <li>- not redeclarable</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post 02 -->
+        <div>
+          <div class="post-header">
+            <h3>02. Whis is difference between Arrow Function and Regular Function ?</h3>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <h4>Regular Function:</h4>
+              <ul>
+                <li>Inside of a regular JavaScript function, this value (aka the execution context) is dynamic.</li>
+                <li>the regular function can easily construct objects.</li>
+                <li>Inside the body of a regular function, arguments is a special array-like object containing the list of arguments with which the function has been invoked.</li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-6">
+              <h4>Arrow Function:</h4>
+              <ul>
+                <li>The behavior of this inside of an arrow function differs considerably from the regular function's this behavior. The arrow function doesn't define its own execution context.</li>
+                <li>A consequence of this resolved lexically is that an arrow function cannot be used as a constructor.</li>
+                <li>On the other side, no arguments special keyword is defined inside an arrow function.</li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post 03 -->
+        <div>
+          <div class="post-header">
+            <h3>03. Why We can use Templete Strings ?</h3>
+          </div>
+          <div class="row">
+            <p>ES6's template strings is a new way to combine strings. We already have methods such as join(), concat() etc to combine strings but the template strings method is the most sophisticated because it’s more readable, no backslash to escape quotes and no more messy plus operators</p>
+          </div>
+        </div>
+
+      </section>
+    </main>
+    
+
+
+    <!-- Bootstrap JS File Link Here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
