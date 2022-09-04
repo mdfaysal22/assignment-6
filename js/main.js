@@ -90,6 +90,7 @@ const detailsDataLoad = (detailsLoad, catagoryNameDisplay) => {
             <h4 class="text-center text-orange">No News Found, Please Visit Another Catagory</h4>
         `;
         posterContainer.appendChild(noFound);
+        loader(false);
    }
     details.forEach(detailsItem => {
         // Load All data.....
