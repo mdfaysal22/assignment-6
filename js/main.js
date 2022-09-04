@@ -81,7 +81,7 @@ const detailsDataLoad = (detailsLoad, catagoryNameDisplay) => {
     const numberOfPost = document.getElementById('item-list');
     numberOfPost.innerText = detailsNumberOfData;
     const placeInnerText = document.getElementById('item-name');
-    console.log(placeInnerText.innerText = catagoryNameDisplay);
+    placeInnerText.innerText = catagoryNameDisplay ? catagoryNameDisplay : "Breaking News";
    if(detailsNumberOfData === 0){
         numberOfPost.innerText = "No";
         const noFound = document.createElement('div');
@@ -106,7 +106,6 @@ const detailsDataLoad = (detailsLoad, catagoryNameDisplay) => {
         
         // Show All Post.....
         const posterBody = document.createElement('div');
-        
         posterBody.innerHTML = `
         <div class="row white-bg p-3 my-3 rounded">
             <div class="col-12 col-lg-4">
@@ -143,11 +142,11 @@ const detailsDataLoad = (detailsLoad, catagoryNameDisplay) => {
         </div>
         `
         posterContainer.appendChild(posterBody);
-        
+        loader(false)
         // Show Post Details.....
         document.getElementById(`${postId}`).addEventListener('click', function(){
             loadpostDetails(`${postId}`);
-            
+            loader(true)
         })
 
     })
@@ -171,6 +170,8 @@ const displayCatagoryName = (catagory) => {
         cataBody.appendChild(catagoryDiv);
         document.getElementById(`${userId}`).addEventListener('click', function(){
             loadCatagoryDetails(`${userId}`, nameOfCatagory);
+
+            loader(true);
         });
 
 })
@@ -182,5 +183,16 @@ const displayCatagoryName = (catagory) => {
 
 loadCatagoryDetails('01');
 
+
+// Loader Function
+const loader = (isLoad) => {
+    const loaderSection  = document.getElementById('loarder-section');
+    if(isLoad){
+        loaderSection.classList.remove('d-none');
+    }
+    else{
+        loaderSection.classList.add('d-none');
+    }
+}
 
 
