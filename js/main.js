@@ -47,6 +47,7 @@ const loadpostDetails = async(postId) => {
 
 // Modal Post Data and Function here.....
 const displayPostData = (postData) => {
+    loader(false);
     const getPost = postData.data[0];
     const authorName = getPost.author.name ? getPost.author.name : "No Data Available";
     const pubData = getPost.author.published_date ? getPost.author.published_date : "No Data Available";
